@@ -21,7 +21,7 @@ class MyApp extends App {
                 height: 100vh;
                 justify-content: center;
                 align-items: center;
-                background-color: #ecebeb;
+                background-color: #121212;
               }
           `}</style>
       </>
