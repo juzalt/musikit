@@ -77,6 +77,7 @@ function Footer(){
       display: flex;
       justify-content: space-evenly; 
       background-color: #282828;
+      height: 20vh;
     }
     #now-playing-bar__left{
       display: flex;
