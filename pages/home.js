@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
+import ItemCard from '../components/itemCard'
 
 function Home(){
 
@@ -10,9 +11,18 @@ function Home(){
     <div className="home__top-container">
       <Navbar/>
         <div className="main-view">
-          <div className="section-header">
-            <h2 className="main-view__section-title">Focus</h2>
-            <p>Music to help you concentrate.</p>
+          <div className="section-container">
+            <div className="section-container__section-header">
+              <h2 className="section-container__section-header__section-title">Focus</h2>
+              <p>Music to help you concentrate.</p>
+            </div>
+            <div className="all-item-cards-container">
+              <ItemCard/>
+              <ItemCard/>
+              <ItemCard/>
+              <ItemCard/>
+              <ItemCard/>
+            </div>
           </div>
           <div>recently played albums container</div>
         </div>
@@ -20,7 +30,6 @@ function Home(){
     </div>
   <style jsx>{`
     .home__top-container {
-      background-color: hsla(0,0%,100%,.3);
       display: grid;
       min-height: 100vh;
       width: 100vw;
@@ -31,7 +40,10 @@ function Home(){
         "nav-bar main-view"
         "footer footer"
     }
-    .main-view__section-title {
+    .section-container__section-header{
+      padding-left: 34px;
+    }
+    .section-container__section-header__section-title {
       font-size: 28px;
       line-height: 1.6;
       font-weight: 600;
@@ -40,6 +52,11 @@ function Home(){
       white-space: nowrap;
       color: #fff;
       font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+    }
+    .all-item-cards-container{
+      display: flex;
+      flex-wrap: no-wrap;
+      justify-content: space-around;
     }
   `}</style>
   </>

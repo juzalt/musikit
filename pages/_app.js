@@ -30,7 +30,7 @@ class MyApp extends App {
                 text-transform: none;
                 font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
               }
-              p {
+              p, h3 {
                 margin-block-start: 0;
                 margin-block-end: 0;
               }
