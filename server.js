@@ -20,11 +20,26 @@ app.prepare().then(() => {
 
   server.get("/", (req, res) => {
     return app.render(req, res, '/home', req.query);
-  });
+  })
+/*  
+  const [accessToken, setAccessToken] = useState([]);
+  const client_id = "264039d0ce2e4ec9a32cf3d2be5905e7";
+  const client_secret = "e34a9d239e4d42cda94baeb04c3a9760";
 
-  server.get("/home", (req, res) => {
-    return app.render(req, res, '/home', req.query);
-  });
+  .then(server.post('https://accounts.spotify.com/api/token',  {
+    mode: 'no-cors',
+    headers: {
+      'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
+    },
+    form: {
+      grant_type: 'client_credentials'
+    },
+    json: true
+  })
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => console.error(error)));*/
 
   server.get("*", (req, res) => {
     return handle(req, res);
