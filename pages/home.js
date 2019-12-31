@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
+import ImpulsoCreativo from '../components/impulsoCreativo'
 import ItemCard from '../components/itemCard'
 
 function Home(){
@@ -17,10 +18,6 @@ function Home(){
               <p>Music to help you concentrate.</p>
             </div>
             <div className="all-item-cards-container">
-              <ItemCard/>
-              <ItemCard/>
-              <ItemCard/>
-              <ItemCard/>
               <ItemCard/>
             </div>
           </div>
