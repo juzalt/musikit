@@ -8,7 +8,8 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-const querystring = require('querystring');
+const querystring = require("querystring");
+const config = require("./config");
 
 
 app.prepare().then(() => {
@@ -31,8 +32,8 @@ app.prepare().then(() => {
   };
 
   const client_id = "264039d0ce2e4ec9a32cf3d2be5905e7";
-  const client_secret = "e34a9d239e4d42cda94baeb04c3a9760";
   const redirect_uri = "http://localhost:3000/home";
+  const client_secret = config.client_secret;
   
   server.get("/", (req, res) => {
     const scope = 'user-read-email user-read-private streaming app-remote-control user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-read-collaborative playlist-read-private user-library-read user-library-modify user-read-recently-played user-top-read user-follow-read user-follow-modify';
