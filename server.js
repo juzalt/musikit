@@ -35,7 +35,7 @@ app.prepare().then(() => {
   const redirect_uri = "http://localhost:3000/home";
   
   server.get("/", (req, res) => {
-    const scope = 'user-read-email user-read-private streaming app-remote-control user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-read-collaborative playlist-read-private user-library-read user-library-modify user-read-recently-played ser-top-read user-follow-read user-follow-modify';
+    const scope = 'user-read-email user-read-private streaming app-remote-control user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-read-collaborative playlist-read-private user-library-read user-library-modify user-read-recently-played user-top-read user-follow-read user-follow-modify';
     var state = generateRandomString(16);
 
     res.redirect('https://accounts.spotify.com/en/authorize?' + 
